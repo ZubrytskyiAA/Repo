@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -54,7 +55,7 @@ public class ImportCSV {
 				Customer customer = new Customer();
 
 				for (int j = 0; j < fildsName.length; j++) {
-
+try{
 					switch (fildsName[j]) {
 
 					case "Name":
@@ -94,6 +95,13 @@ public class ImportCSV {
 
 						break;
 
+						}
+					} catch (NumberFormatException e) {
+						e.printStackTrace();
+						break;
+					} catch (DateTimeParseException e) {
+						e.printStackTrace();
+						break;
 					}
 				}
 
@@ -119,7 +127,7 @@ System.out.println("");
 				Item item = new Item();
 
 				for (int j = 0; j < fildsName.length; j++) {
-
+					try{
 					switch (fildsName[j]) {
 
 					case "id":
@@ -142,6 +150,13 @@ System.out.println("");
 						item.setDateOfLastUpdate(LocalDateTime.parse(itemsTable.get(i)[j], formatdateOfLastUpdate));
 						break;
 
+						}
+					} catch (NumberFormatException e) {
+						e.printStackTrace();
+						break;
+					} catch (DateTimeParseException e) {
+						e.printStackTrace();
+						break;
 					}
 				}
 
