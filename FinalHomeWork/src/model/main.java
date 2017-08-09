@@ -13,7 +13,7 @@ public class main {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 
 		File urlCustomer = new File("d:\\Customers.csv");
 		File urlItem = new File("d:\\items.csv");
