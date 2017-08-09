@@ -1,0 +1,4 @@
+Driver=com.mysql.jdbc.Driver
+DBConnectionString=jdbc:mysql://localhost/boi
+Name=root
+Password=root
