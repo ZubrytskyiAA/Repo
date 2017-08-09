@@ -13,19 +13,13 @@ public class main {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 
-		File urlCustomer = new File("d:\\Customers.csv");
-		File urlItem = new File("d:\\items.csv");
-
-		
-//		 List<Customer> customers= importCSV.createCustomersListAfterImport(urlCustomer);
-//		 List<Item> items= importCSV.createItemsListAfterImport(urlItem);
 		 
-//		 MySQLOperation.rebildAllTables();
-//		 
-//		 MySQLOperation.insertImportDate(items);
-//		 MySQLOperation.insertImportDate(customers);
+		 MySQLOperation.rebildAllTables();
+		 
+		 MySQLOperation.insertImportDate(ImportCSV.createItemsListAfterImport(new File("d:\\items.csv")));
+		 MySQLOperation.insertImportDate(ImportCSV.createCustomersListAfterImport(new File("d:\\Customers.csv")));
 		 
 		 //Tast 3.c.1
 		// MySQLOperation.popularGoodsByGenders(Genders.male);
