@@ -25,7 +25,7 @@ public class MySQLOperation {
 		String query = "INSERT INTO Items (ID, title, code,Producer,DateOfLastUpdate) VALUES (?, ?, ?, ?, ?);";
 
 try {
-			//test
+			
 	
 	con = SQLConnection.getConnection();
 	con.setAutoCommit(false);
